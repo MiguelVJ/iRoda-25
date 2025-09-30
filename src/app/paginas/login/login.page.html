@@ -4,7 +4,8 @@
 </ion-header>
 <ion-content [fullscreen]="true" padding class="background">
   <form #loginForm="ngForm" novalidate>
-    <ion-img src="../../assets/img/irodaB.png"></ion-img>
+    <ion-img *ngIf="compania == 'iroda'" src="../../assets/img/{{logo}}"></ion-img>
+    <ion-img *ngIf="compania == 'lua'" src="../../assets/img/{{logoBlanco}}"></ion-img>
 
     <div style="width: 90%;margin: auto;">
       <ion-input style="margin-bottom: 10px; margin-top: 30px; padding: 5px; " placeholder="Usuario" type="text"

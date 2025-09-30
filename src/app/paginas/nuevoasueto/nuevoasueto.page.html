@@ -1,13 +1,14 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Nuevo asueto</ion-title>
+    <ion-title class="boton-dorado">Nuevo asueto</ion-title>
     <ion-buttons slot="start">
       <ion-back-button class="dorado" defaultHref="" (click)="atras()" text=""></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true"
+class="contenido">
 
   <form #nAsueto="ngForm" novalidate>
     <ion-grid>

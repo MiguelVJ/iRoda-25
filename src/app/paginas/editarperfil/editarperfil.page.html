@@ -6,17 +6,19 @@
     </ion-buttons>
     <ion-buttons slot="end" *ngIf="idRol == 2">
       <ion-button (click)="verPaquetes(idUsuario)">
-        <ion-icon class="dorado" name="book-outline"></ion-icon>
+        <ion-icon class="dorado" name="book-outline" *ngIf="compania === 'iroda'"></ion-icon>
+        <ion-icon class="dorado icon-24" slot="icon-only" name="memberships" *ngIf="compania === 'lua'"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-buttons *ngIf="totalMultas > 0" slot="end">
       <ion-button (click)="eliminarFaltas(idUsuario,nombre)">
-        <ion-icon color="danger" name="notifications-off-outline"></ion-icon>
+        <ion-icon color="danger" name="notifications-off-outline" *ngIf="compania === 'iroda'"></ion-icon>
+        <ion-icon class="rojo icon-20" slot="icon-only" name="not-notf" *ngIf="compania === 'lua'"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="contenido">
   <form #editarPerfil="ngForm" novalidate>
     <ion-grid size-md="6" size-lg="5" size-xs="12">
       <ion-row color="primary" justify-content-center>

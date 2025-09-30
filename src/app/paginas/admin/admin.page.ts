@@ -7,6 +7,8 @@ import {
 } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
+import { API_URL } from 'src/app/app.config';
+import { COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-admin',
@@ -14,8 +16,8 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['./admin.page.scss'],
 })
 export class AdminPage implements OnInit {
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
 
+  compania = COMPANIA;
   usuario: any;
   idrol: any;
   bloq: any;
@@ -54,7 +56,7 @@ export class AdminPage implements OnInit {
       console.log(this.idUser, 'Id del usuario');
       this.servicio
         .getData(
-          this.urlapi +
+          API_URL +
             'Usuarios/usuario-con-mensaje/' +
             this.idUsuario +
             '?sociedad=' +
@@ -156,7 +158,7 @@ export class AdminPage implements OnInit {
   bloqueado(idUsuario: any) {
     this.servicio
       .getData(
-        'http://54.176.17.249:8080/control_asistencias_api/Usuarios/bloqueo-por-pago/' +
+        API_URL + 'Usuarios/bloqueo-por-pago/' +
           idUsuario
       )
       .subscribe((data) => {

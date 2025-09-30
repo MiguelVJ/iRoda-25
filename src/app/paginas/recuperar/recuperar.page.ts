@@ -6,6 +6,7 @@ import {
 } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { NgForm } from '@angular/forms';
+import { API_URL } from 'src/app/app.config';
 
 @Component({
   selector: 'app-recuperar',
@@ -22,8 +23,6 @@ export class RecuperarPage implements OnInit {
   listado: any;
   submitted = false;
 
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
-
   constructor(
     private navCtrl: NavController,
     private servicio: LoginService,
@@ -38,7 +37,7 @@ export class RecuperarPage implements OnInit {
     this.submitted = true;
 
     this.servicio
-      .getData(this.urlapi + 'Usuarios/' + this.rp.email)
+      .getData(API_URL + 'Usuarios/' + this.rp.email)
       .subscribe((data) => {
         console.log(data);
         this.listado = data;

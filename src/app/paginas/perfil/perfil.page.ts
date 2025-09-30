@@ -6,7 +6,8 @@ import {
   NavController,
 } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
-
+import { API_URL } from 'src/app/app.config';
+import { COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-perfil',
@@ -14,6 +15,8 @@ import { LoginService } from 'src/app/servicios/login.service';
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage implements OnInit {
+
+  compania: string = COMPANIA;
   mensaje: any;
   idUsuario: any;
   msjError: any;
@@ -21,7 +24,6 @@ export class PerfilPage implements OnInit {
   textoBuscar:string = '';
 
   listado: any;
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
 
   constructor(
     private navCtrl: NavController,
@@ -135,7 +137,7 @@ export class PerfilPage implements OnInit {
   }
 
   obtenerDatos() {
-    this.servicio.getData(this.urlapi + 'Usuarios/').subscribe((data) => {
+    this.servicio.getData(API_URL + 'Usuarios/').subscribe((data) => {
       this.listado = data;
     });
   }

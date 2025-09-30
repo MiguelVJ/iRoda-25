@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { AlertController, LoadingController, NavParams } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
+import { LOGO } from 'src/app/app.config';
+import { API_URL } from 'src/app/app.config';
 
 @Component({
   selector: 'app-asisalumno',
@@ -11,7 +13,7 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class AsisalumnoPage implements OnInit {
 
-  
+  logo = LOGO;
   fechaClase: Date = new Date();
 
   fa = {
@@ -29,8 +31,6 @@ export class AsisalumnoPage implements OnInit {
   fechaDeClase: any;
   fecha: any;
   mensajeerror: any;
-
-  urlapi = "http://54.176.17.249:8080/control_asistencias_api/"
 
   constructor(
     private servicio: LoginService,
@@ -59,7 +59,7 @@ export class AsisalumnoPage implements OnInit {
     this.idUsuario = this.activatedRoute.snapshot.paramMap.get('idUsuario');
     this.usuario = this.activatedRoute.snapshot.paramMap.get('usuario');
 
-    this.servicio.getData(this.urlapi + 'Usuarios/usuario/' + this.usuario + '/').subscribe(data => {
+    this.servicio.getData(API_URL + 'Usuarios/usuario/' + this.usuario + '/').subscribe(data => {
 
       console.log(data);
 
@@ -199,7 +199,7 @@ export class AsisalumnoPage implements OnInit {
 
     console.log("El ID de la clase es :", this.idClase);
 
-    this.servicio.getData('http://54.176.17.249:8080/control_asistencias_api/AsistenciaClases/' + this.idClase + '/').subscribe(data => {
+    this.servicio.getData(API_URL+'AsistenciaClases/' + this.idClase + '/').subscribe(data => {
       console.log(data, "ngOnInit");
       this.listado = data;
 
@@ -215,7 +215,8 @@ export class AsisalumnoPage implements OnInit {
 
     this.fecha = this.fa.fecha.substring(0, 10);
 
-    this.servicio.getData('http://54.176.17.249:8080/control_asistencias_api/AsistenciaClases/' + this.idClase + '?fecha=' + this.fecha).subscribe(data => {
+    this.servicio.getData(
+      'AsistenciaClases/' + this.idClase + '?fecha=' + this.fecha).subscribe(data => {
       console.log(data, "cambioFecha");
       this.listado = data;
     });

@@ -6,13 +6,14 @@
     </ion-buttons>
     <ion-buttons slot="end" *ngIf="idRol == 2">
       <ion-button (click)="agregarPaquete()">
-        <ion-icon class="dorado" name="duplicate-outline"></ion-icon>
+        <ion-icon class="dorado" name="duplicate-outline" *ngIf="compania === 'iroda'"></ion-icon>
+        <ion-icon class="dorado icon-24" slot="icon-only" name="add-mem" *ngIf="compania === 'lua'"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
 
   <ion-list style="text-align: center;" *ngIf="listado?.respuesta == ''">
     <br>

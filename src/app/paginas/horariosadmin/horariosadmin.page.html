@@ -8,7 +8,7 @@
 </ion-header>
 <ion-content>
   <div style="text-align: center;">
-    <label class="label-fechaf">{{fechaf}}</label>
+    <label class="label-g1">{{fechaf}}</label>
   </div>
 
   <ion-list style="text-align: center;" *ngIf="listado?.respuesta == ''">
@@ -104,10 +104,10 @@
               <label style="font-weight: bold; font-size: 13px;">
                 {{Clases.descripcionHorario}}
               </label>
-              <label *ngIf="Clases.estatus == '1'" class="label-estatus-a">
+              <label *ngIf="Clases.estatus == '1'" [ngClass]="compania === 'iroda' ? 'label-estatus-a-iroda' : 'label-estatus-a-lua'">
                 A
               </label>
-              <label *ngIf="Clases.estatus == '0'" class="label-estatus-i">
+              <label *ngIf="Clases.estatus == '0'"[ngClass]="compania === 'iroda' ? 'label-estatus-i-iroda' : 'label-estatus-i-lua'">
                 D
               </label>
             </ion-col>
@@ -125,7 +125,7 @@
           </ion-row>
           <ion-row>
             <ion-col>
-              <label style="font-size: 13px;color: #3DAF93;font-weight: bold;">
+              <label class="color-coach" style="font-size: 13px;">
                 Coach {{Clases.profesorNombre}}
               </label>
             </ion-col>

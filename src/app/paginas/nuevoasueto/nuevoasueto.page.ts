@@ -4,6 +4,7 @@ import { AlertController, LoadingController, NavController } from '@ionic/angula
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
 import { NgForm } from '@angular/forms';
+import { API_URL } from 'src/app/app.config';
 
 @Component({
   selector: 'app-nuevoasueto',
@@ -11,9 +12,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./nuevoasueto.page.scss'],
 })
 export class NuevoasuetoPage implements OnInit {
-
-  
-  urlapi = "http://54.176.17.249:8080/control_asistencias_api/";
 
   fecha:any;
   mensaje: any;
@@ -81,7 +79,7 @@ export class NuevoasuetoPage implements OnInit {
       this.usuario = user;
       this.sociedad = this.usuario.respuesta.sociedad;
 
-      this.servicio.getData(this.urlapi + 'Clases?sociedad='+this.sociedad).subscribe(data => {
+      this.servicio.getData(API_URL + 'Clases?sociedad='+this.sociedad).subscribe(data => {
         
         let objUsEnt = JSON.stringify(data);
         let json = JSON.parse(objUsEnt);

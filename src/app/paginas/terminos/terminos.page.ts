@@ -6,6 +6,9 @@ import {
 } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
+import { LOGO } from 'src/app/app.config';
+import { COMPANIA } from 'src/app/app.config';
+
 
 @Component({
   selector: 'app-terminos',
@@ -14,7 +17,8 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class TerminosPage implements OnInit {
 
-  
+  compania = COMPANIA;
+  logo: string = LOGO;
   isChecked =  false;
   usuario: any;
   idrol: any;

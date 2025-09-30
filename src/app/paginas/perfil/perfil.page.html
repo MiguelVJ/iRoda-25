@@ -3,7 +3,12 @@
     <ion-title>Perfiles</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="registro()">
-        <ion-icon class="dorado" slot="icon-only" name="person-add-outline"></ion-icon>
+        <ion-icon class="dorado" slot="icon-only" name="person-add-outline" *ngIf="compania === 'iroda'"></ion-icon>
+
+        <ion-icon class="dorado icon-20" slot="icon-only" name="add-user-lua" *ngIf="compania === 'lua'"></ion-icon>
+        
+        <ion-icon class="dorado icon-20" slot="icon-only" name="person-add-outline" *ngIf="compania !== 'iroda' && compania !== 'lua'"></ion-icon>
+
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="start">
@@ -55,8 +60,8 @@
               </ion-col>
 
             </ion-row>
-            <ion-row>
-              <ion-col style="margin-top: 5px;">
+            <ion-row style="margin-top: 1px;">
+              <ion-col >
 
 
                 <label *ngIf="Usuarios.estatus == 1" class="label-activo">Activo</label>
@@ -72,9 +77,9 @@
                 </label>
               </ion-col>
             </ion-row>
-            <ion-row>
+            <ion-row *ngIf="Usuarios.idRol == 2 && Usuarios.vencimiento != 'N/A'">
               <ion-col>
-                <label *ngIf="Usuarios.idRol == 2 && Usuarios.vencimiento != 'N/A'"
+                <label 
                   class="label-membresiavenc">{{Usuarios.vencimiento}}</label>
                 <!--<label *ngIf="Usuarios.idRol == 3" class="lvencimiento">
                 Clases 6,7,8
@@ -82,9 +87,9 @@
               </ion-col>
             </ion-row>
 
-            <ion-row>
+            <ion-row *ngIf="Usuarios.totalMultas > 0" >
               <ion-col>
-                <label *ngIf="Usuarios.totalMultas > 0" class="multas">
+                <label class="multas">
                   {{Usuarios.totalMultas}} multas
                 </label>
               </ion-col>

@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './servicios/login.service';
+import { IconsService } from './servicios/icons.service';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(),IonicStorageModule.forRoot(),HttpClientModule, AppRoutingModule],
   providers: [
     LoginService,
+    IconsService,
     NavParams,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

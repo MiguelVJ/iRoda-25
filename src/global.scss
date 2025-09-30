@@ -26,223 +26,424 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 
- // Font Montserrat
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+// Font Montserrat y Poppins
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
- *{
-   font-family: 'Montserrat', sans-serif !important;
- }
+* {
+  font-family: var(--font-family, 'Montserrat'), sans-serif !important;
+}
 
- .dorado{
-   color: #EFB810;
-  //  height: 35px;
-   font-size: 16px;
-  //  --background: ;
- }
+/* Variables CSS para colores según la compañía */
+:root {
+  --color-dorado-iroda: #EFB810;
+  --color-dorado-lua: #f1be22;
+  /* IRODA */
+  --color-dorado-iroda-dark: #a88118;
+  --color-dorado-lua-dark: #a88118;
+  /*  LUA */
 
- ion-title {
-   font-size: 16px;
-   background-color: white;
-   color: #EFB810;
-   text-align: center;
-   
- }
+  /* Variables para altura y border-radius de botones */
+  --btn-height-iroda: 45px;
+  --btn-height-lua: 40px;
+  --btn-border-radius-iroda: 15px;
+  --btn-border-radius-lua: 20px;
 
- .btndorado{
-   color: white;    
-   --background: #EFB810;
-   height: 35px;
-   font-size: 16px;
-   --background-activated: #a88118;
-   --background-activated-opacity:1
- }
+  --label-g1-iroda: #b1e678;
+  --label-g1-lua: #facbe7;
+  --label-g1-fontc-iroda: #567419;
+  --label-g1-fontc-lua: #540f38;
 
- .btngris{
-  color: white;    
+  --coach-iroda: #3DAF93;
+  --coach-lua: #cf2aa8;
+
+  /* Variables para fuentes según la compañía */
+  --font-family-iroda: 'Montserrat';
+  --font-family-lua: 'Poppins';
+
+  /* Variables para fondos de login según la compañía */
+  --login-background-iroda: url('/assets/img/fondoLoginiRoda.jpeg');
+  --login-background-lua: url('/assets/img/LUAstudioPhoto.png');
+
+  --color-activo-iroda: #417505;
+  --color-inactivo-iroda: #d0011b;
+  --color-faltapago-iroda: #white;
+  --color-activo-lua: #417505;
+  --color-inactivo-lua: #d0011b;
+  --color-faltapago-lua: #white;
+  --backgroud-color-activo-iroda: #d9f7b8;
+  --backgroud-color-inactivo-iroda: #ffced4;
+  --backgroud-color-faltapago-iroda: #efb810;
+  --backgroud-color-activo-lua: #d9f7b8;
+  --backgroud-color-inactivo-lua: #ffced4;
+  --backgroud-color-faltapago-lua: #efb810;
+
+  --color-usuario-iroda: #1a32d1;
+  --color-usuarioc-iroda: #3d7168;
+  --color-usuarioa-iroda: #917147;
+  --color-usuario-lua: #1a32d1;
+  --color-usuarioc-lua: #4f1e79;
+  --color-usuarioa-lua: #917147;
+  --backgroud-color-usuario-iroda: #cee3fc;
+  --backgroud-color-usuarioc-iroda: #c7f1ea;
+  --backgroud-color-usuarioa-iroda: #fbe5ca;
+  --backgroud-color-usuario-lua: #cee3fc;
+  --backgroud-color-usuarioc-lua: #ddc1f7;
+  --backgroud-color-usuarioa-lua: #fbe5ca;
+
+  --label-lugar-iroda: #41b558;
+  --label-lugar-lua: #d9821f;
+}
+
+/* Clases para aplicar los estilos según la compañía */
+.compania-iroda {
+  --color-dorado: var(--color-dorado-iroda);
+  --color-dorado-dark: var(--color-dorado-iroda-dark);
+  --btn-height: var(--btn-height-iroda);
+  --btn-border-radius: var(--btn-border-radius-iroda);
+  --label-g1: var(--label-g1-iroda);
+  --label-g1-fontc: var(--label-g1-fontc-iroda);
+  --coach: var(--coach-iroda);
+  --font-family: var(--font-family-iroda);
+  --login-background: var(--login-background-iroda);
+
+  --color-activo: var(--color-activo-iroda);
+  --backgroud-color-activo: var(--backgroud-color-activo-iroda);
+  --color-inactivo: var(--color-inactivo-iroda);
+  --backgroud-color-inactivo: var(--backgroud-color-inactivo-iroda);
+  --color-faltapago: var(--color-faltapago-iroda);
+  --backgroud-color-faltapago: var(--backgroud-color-faltapago-iroda);
+
+  --color-usuario: var(--color-usuario-iroda);
+  --backgroud-color-usuario: var(--backgroud-color-usuario-iroda);
+  --color-usuarioc: var(--color-usuarioc-iroda);
+  --backgroud-color-usuarioc: var(--backgroud-color-usuarioc-iroda);
+  --color-usuarioa: var(--color-usuarioa-iroda);  
+  --backgroud-color-usuarioa: var(--backgroud-color-usuarioa-iroda);
+  --label-lugar: var(--label-lugar-iroda);
+}
+
+.compania-lua {
+  --color-dorado: var(--color-dorado-lua);
+  --color-dorado-dark: var(--color-dorado-lua-dark);
+  --btn-height: var(--btn-height-lua);
+  --btn-border-radius: var(--btn-border-radius-lua);
+  --label-g1: var(--label-g1-lua);
+  --label-g1-fontc: var(--label-g1-fontc-lua);
+  --coach: var(--coach-lua);
+  --font-family: var(--font-family-lua);
+  --login-background: var(--login-background-lua);
+
+  --color-activo: var(--color-activo-lua);
+  --backgroud-color-activo: var(--backgroud-color-activo-lua);
+  --color-inactivo: var(--color-inactivo-lua);
+  --backgroud-color-inactivo: var(--backgroud-color-inactivo-lua);
+  --color-faltapago: var(--color-faltapago-lua);
+  --backgroud-color-faltapago: var(--backgroud-color-faltapago-lua);
+
+  --color-usuario: var(--color-usuario-lua);
+  --backgroud-color-usuario: var(--backgroud-color-usuario-lua);
+  --color-usuarioc: var(--color-usuarioc-lua);
+  --backgroud-color-usuarioc: var(--backgroud-color-usuarioc-lua);
+  --color-usuarioa: var(--color-usuarioa-lua);  
+  --backgroud-color-usuarioa: var(--backgroud-color-usuarioa-lua);
+
+  --label-lugar: var(--label-lugar-lua);
+}
+
+.logo {
+  width: 40%;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.dorado {
+  color: var(--color-dorado, #EFB810);
+  /* Fallback al color original */
+  //height: 35px;
+  font-size: 16px;
+  //--background: ;
+}
+
+.rojo{
+  color: #e00e0e;
+}
+
+ion-title {
+  font-size: 16px;
+  background-color: white;
+  color: var(--color-dorado, #EFB810);
+  text-align: center;
+
+}
+
+/* Clase específica para ion-title con color de botón dorado */
+ion-title.boton-dorado {
+  color: var(--color-dorado, #EFB810) !important;
+  font-weight: bold;
+}
+
+.btndorado {
+  color: white !important;
+  --background: var(--color-dorado, #EFB810);
+  --height: var(--btn-height, 35px) !important;
+  /* Altura variable según compañía */
+  height: var(--btn-height, 35px) !important;
+  /* Fallback y forzar altura */
+  min-height: var(--btn-height, 35px) !important;
+  /* Asegurar altura mínima */
+  font-size: 16px;
+  --background-activated: var(--color-dorado-dark, #a88118);
+  --background-activated-opacity: 1;
+  --border-radius: var(--btn-border-radius, 4px) !important;
+  /* Border radius variable según compañía */
+  border-radius: var(--btn-border-radius, 4px) !important;
+  /* Fallback para elementos HTML normales */
+}
+
+/* Selector específico para ion-button con clase btndorado */
+ion-button.btndorado {
+  --height: var(--btn-height, 35px) !important;
+  height: var(--btn-height, 35px) !important;
+  min-height: var(--btn-height, 35px) !important;
+  --border-radius: var(--btn-border-radius, 4px) !important;
+  border-radius: var(--btn-border-radius, 4px) !important;
+}
+
+.btngris {
+  color: white;
   --background: #c6bb97;
   height: 20px;
   font-size: 14px;
   --background-activated: #cfbc88;
-  --background-activated-opacity:1
+  --background-activated-opacity: 1
 }
 
- ion-searchbar {
-   .searchbar-input-container {
-       input{
-           font-size: 14px !important;
-       }
-   }
+.label-g1 {
+  //background-color: #b1e678;
+  background-color: var(--label-g1, #EFB810);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--label-g1-fontc, #EFB810);
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
- .greeni{
-   color:white ;
-   --background: #17A589 ;
- }
+.anuncio {
+  background-color: var(--label-g1, #EFB810);
+  padding: 4.5px;
+  padding-left: 7px;
+  padding-right: 7px;
+  color: var(--label-g1-fontc, #EFB810);
+  border-radius: 10px;
+  font-size: 8px;
+  text-align: center !important;
+  width: 100%;
+}
 
- .verde{
-   color: #17A589;
- }
+.color-coach {
+  color: var(--coach, #EFB810);
+}
 
- .labelinput{
-   color: rgb(139, 137, 137);
- }
+.contenido {
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
 
- ion-item::part(native) {
-   //WRITE ALL YOUR CSS RULES HERE
-   padding-left: unset;
-   /** and lots more **/
- }
+.label-estatus-a-iroda {
+  background-color: #19b694;
+  padding: 2px;
+  margin-left: 3px;
+  color: #ffffff;
+  border-radius: 15px;
+  font-size: 11px;
+}
+
+.label-estatus-a-lua {
+  background-color: #7C3AED;
+  color: #ffffff;
+  border-radius: 50%;
+  /* Círculo perfecto */
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 3px;
+}
+
+.label-estatus-i-iroda {
+  background-color: #e19e4c;
+  padding: 2px;
+  margin-left: 3px;
+  color: #ffffff;
+  border-radius: 15px;
+  font-size: 11px;
+}
+
+.label-estatus-i-lua {
+  background-color: #94A3B8;
+  color: #ffffff;
+  border-radius: 50%;
+  /* Círculo perfecto */
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 3px;
+}
 
 
-//  body.dark {
-//    --ion-color-primary: #428cff;
-//    --ion-color-primary-rgb: 66, 140, 255;
-//    --ion-color-primary-contrast: #ffffff;
-//    --ion-color-primary-contrast-rgb: 255, 255, 255;
-//    --ion-color-primary-shade: #3a7be0;
-//    --ion-color-primary-tint: #5598ff;
- 
-//    --ion-color-secondary: #50c8ff;
-//    --ion-color-secondary-rgb: 80, 200, 255;
-//    --ion-color-secondary-contrast: #ffffff;
-//    --ion-color-secondary-contrast-rgb: 255, 255, 255;
-//    --ion-color-secondary-shade: #46b0e0;
-//    --ion-color-secondary-tint: #62ceff;
- 
-//    --ion-color-tertiary: #6a64ff;
-//    --ion-color-tertiary-rgb: 106, 100, 255;
-//    --ion-color-tertiary-contrast: #ffffff;
-//    --ion-color-tertiary-contrast-rgb: 255, 255, 255;
-//    --ion-color-tertiary-shade: #5d58e0;
-//    --ion-color-tertiary-tint: #7974ff;
- 
-//    --ion-color-success: #2fdf75;
-//    --ion-color-success-rgb: 47, 223, 117;
-//    --ion-color-success-contrast: #000000;
-//    --ion-color-success-contrast-rgb: 0, 0, 0;
-//    --ion-color-success-shade: #29c467;
-//    --ion-color-success-tint: #44e283;
- 
-//    --ion-color-warning: #ffd534;
-//    --ion-color-warning-rgb: 255, 213, 52;
-//    --ion-color-warning-contrast: #000000;
-//    --ion-color-warning-contrast-rgb: 0, 0, 0;
-//    --ion-color-warning-shade: #e0bb2e;
-//    --ion-color-warning-tint: #ffd948;
- 
-//    --ion-color-danger: #ff4961;
-//    --ion-color-danger-rgb: 255, 73, 97;
-//    --ion-color-danger-contrast: #ffffff;
-//    --ion-color-danger-contrast-rgb: 255, 255, 255;
-//    --ion-color-danger-shade: #e04055;
-//    --ion-color-danger-tint: #ff5b71;
- 
-//    --ion-color-dark: #f4f5f8;
-//    --ion-color-dark-rgb: 244, 245, 248;
-//    --ion-color-dark-contrast: #000000;
-//    --ion-color-dark-contrast-rgb: 0, 0, 0;
-//    --ion-color-dark-shade: #d7d8da;
-//    --ion-color-dark-tint: #f5f6f9;
- 
-//    --ion-color-medium: #989aa2;
-//    --ion-color-medium-rgb: 152, 154, 162;
-//    --ion-color-medium-contrast: #000000;
-//    --ion-color-medium-contrast-rgb: 0, 0, 0;
-//    --ion-color-medium-shade: #86888f;
-//    --ion-color-medium-tint: #a2a4ab;
- 
-//    --ion-color-light: #222428;
-//    --ion-color-light-rgb: 34, 36, 40;
-//    --ion-color-light-contrast: #ffffff;
-//    --ion-color-light-contrast-rgb: 255, 255, 255;
-//    --ion-color-light-shade: #1e2023;
-//    --ion-color-light-tint: #383a3e;
-//  }
- 
-//  /*
-//   * iOS Dark Theme
-//   * -------------------------------------------
-//   */
- 
-//  .ios body.dark {
-//    --ion-background-color: #000000;
-//    --ion-background-color-rgb: 0, 0, 0;
- 
-//    --ion-text-color: #9fffff;
-//    --ion-text-color-rgb: 255, 255, 255;
- 
-//    --ion-color-step-50: #0d0d0d;
-//    --ion-color-step-100: #1a1a1a;
-//    --ion-color-step-150: #262626;
-//    --ion-color-step-200: #333333;
-//    --ion-color-step-250: #404040;
-//    --ion-color-step-300: #4d4d4d;
-//    --ion-color-step-350: #595959;
-//    --ion-color-step-400: #666666;
-//    --ion-color-step-450: #737373;
-//    --ion-color-step-500: #808080;
-//    --ion-color-step-550: #8c8c8c;
-//    --ion-color-step-600: #999999;
-//    --ion-color-step-650: #a6a6a6;
-//    --ion-color-step-700: #b3b3b3;
-//    --ion-color-step-750: #bfbfbf;
-//    --ion-color-step-800: #cccccc;
-//    --ion-color-step-850: #d9d9d9;
-//    --ion-color-step-900: #e6e6e6;
-//    --ion-color-step-950: #f2f2f2;
- 
-//    --ion-item-background: #000000;
- 
-//    --ion-card-background: #1c1c1d;
-//  }
- 
-//  .ios body.dark ion-modal {
-//    --ion-background-color: var(--ion-color-step-100);
-//    --ion-toolbar-background: var(--ion-color-step-150);
-//    --ion-toolbar-border-color: var(--ion-color-step-250);
-//    --ion-item-background: var(--ion-color-step-150);
-//  }
- 
-//  /*
-//   * Material Design Dark Theme
-//   * -------------------------------------------
-//   */
- 
-//  .md body.dark {
-//    --ion-background-color: #121212;
-//    --ion-background-color-rgb: 18, 18, 18;
- 
-//    --ion-text-color: #ffffff;
-//    --ion-text-color-rgb: 255, 255, 255;
- 
-//    --ion-border-color: #222222;
- 
-//    --ion-color-step-50: #1e1e1e;
-//    --ion-color-step-100: #2a2a2a;
-//    --ion-color-step-150: #363636;
-//    --ion-color-step-200: #414141;
-//    --ion-color-step-250: #4d4d4d;
-//    --ion-color-step-300: #595959;
-//    --ion-color-step-350: #656565;
-//    --ion-color-step-400: #717171;
-//    --ion-color-step-450: #7d7d7d;
-//    --ion-color-step-500: #898989;
-//    --ion-color-step-550: #949494;
-//    --ion-color-step-600: #a0a0a0;
-//    --ion-color-step-650: #acacac;
-//    --ion-color-step-700: #b8b8b8;
-//    --ion-color-step-750: #c4c4c4;
-//    --ion-color-step-800: #d0d0d0;
-//    --ion-color-step-850: #dbdbdb;
-//    --ion-color-step-900: #e7e7e7;
-//    --ion-color-step-950: #f3f3f3;
- 
-//    --ion-item-background: #1e1e1e;
- 
-//    --ion-toolbar-background: #1f1f1f;
- 
-//    --ion-tab-bar-background: #1f1f1f;
- 
-//    --ion-card-background: #1e1e1e;
-   
-//  }
+.label-usuario {
+  background-color: var(--backgroud-color-usuario,#cee3fc);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--color-usuario,#1a32d1);
+  border-radius: 15px;
+  font-size: 10px;
+}
+
+.label-usuario-c {
+  background-color: var(--backgroud-color-usuarioc,#c7f1ea);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--color-usuarioc,#3d7168);
+  border-radius: 15px;
+  font-size: 10px;
+}
+
+.label-usuario-a {
+  background-color: var(--backgroud-color-usuarioa,#fbe5ca);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--color-usuarioa,#917147);
+  border-radius: 15px;
+  font-size: 10px;
+}
+
+.label-activo {
+  background-color: var(--backgroud-color-activo, #EFB810);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--color-activo, #EFB810);
+  border-radius: 15px;
+  font-size: 10px;
+}
+
+.label-inactivo {
+  background-color: var(--backgroud-color-inactivo, #EFB810);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--color-inaactivo, #EFB810);
+  border-radius: 15px;
+  font-size: 10px;
+}
+
+.multas {
+  float: right;
+  clear: right;
+  background-color: #ffced4;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #d0011b;
+  border-radius: 15px;
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+
+.label-faltapago {
+  background-color: var(--backgroud-color-faltapago, #EFB810);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--color-faltapago, #EFB810);
+  border-radius: 15px;
+  font-size: 10px;
+}
+
+.label-lugar {
+  background-color: #eeeded;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--label-lugar,#41b558);
+  border-radius: 15px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* Clase para íconos de 24px exactos */
+.icon-24 {
+  font-size: 24px !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+/* Clase para íconos pequeños de 20px */
+.icon-20 {
+  font-size: 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* Clase para íconos medianos de 28px */
+.icon-28 {
+  font-size: 28px !important;
+  width: 28px !important;
+  height: 28px !important;
+}
+
+
+ion-searchbar {
+  .searchbar-input-container {
+    input {
+      font-size: 14px !important;
+    }
+  }
+}
+
+.greeni {
+  color: white;
+  --background: #17A589;
+}
+
+.verde {
+  color: #17A589;
+}
+
+.labelinput {
+  color: rgb(139, 137, 137);
+}
+
+ion-item::part(native) {
+  //WRITE ALL YOUR CSS RULES HERE
+  padding-left: unset;
+  /** and lots more **/
+}

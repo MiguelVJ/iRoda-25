@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="contenido">
   <form #cambiarPass="ngForm" novalidate>
     <ion-grid>
       <ion-row>
@@ -15,7 +15,8 @@
           <div padding>
 
             <div style="text-align:center;">
-              <ion-img style="margin-bottom: 15px;" src='assets/img/reset-password.png'></ion-img>
+              <ion-img style="margin-bottom: 15px;" src='assets/img/reset-password.png' *ngIf="compania === 'iroda'"></ion-img>
+               <ion-img style="margin-bottom: 15px;" src='assets/img/pr1.png'  *ngIf="compania === 'lua'"></ion-img>
               <label>Ingresa los datos para poder resetear tu contraseña</label>
             </div>
             <ion-item>

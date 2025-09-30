@@ -8,6 +8,8 @@ import {
 } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
+import { LOGO } from 'src/app/app.config';
+import { COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-lugares',
@@ -15,6 +17,9 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['./lugares.page.scss'],
 })
 export class LugaresPage implements OnInit {
+
+  logo = LOGO;
+  compania = COMPANIA;
   fechaf: any;
   descripcionHorario: any;
   idClase: any;
@@ -76,6 +81,7 @@ export class LugaresPage implements OnInit {
     private navParams: NavParams,
     private storage: Storage
   ) {
+   
     this.usuario = this.navParams.get(this.usuario);
     this.storage.get('DatosUsuario').then((data) => {
       this.usuario = data;
@@ -130,20 +136,21 @@ export class LugaresPage implements OnInit {
         var l4 = this.listado.respuesta.l2;
         var l5 = this.listado.respuesta.l1;
 
+        console.log('l5', l5);
+        console.log('Tamaño de l5:', l5 ? l5.length : 0);
+
         arr.push(l1);
         arr.push(l5);
         arr.push(l4);
         arr.push(l3);
         arr.push(l2);
         this.lugaresServicio = arr;
-
         console.log('lapartado' + this.lapartado);
-
+        console.log('arr' + l5.lenght);
         // this.lapartado = this.listado.respuesta[0].seleccionado;
-      } else {
-        // this.errorCargar();
-        // this.navCtrl.navigateRoot('/admin');
+        
       }
+
       this.servicio.configPostHorasCancelacion('HORAS-PERMITIDAS-CANCELACION').subscribe((response: any) => {
         this.horasCancelacion = response.respuesta[0].valorAbajo;
         console.log('hc:'+this.horasCancelacion);
@@ -155,7 +162,42 @@ export class LugaresPage implements OnInit {
     this.navCtrl.navigateRoot('/horarios/' + this.fechaf);
   }
 
-  async apartarLugar(lugar: any) {
+  async apartarLugarLUA(lugar: any) {
+    console.log('lugar' + lugar);
+    const alert = await this.alertCtrl.create({
+      cssClass: 'my-custom-class',
+      message:
+        'Seguro que desea apartar el lugar ' +
+        lugar +
+        ' ? ' +
+        ',de la clase de ' +
+        this.descripcionHorario +
+        ' del dia ' +
+        this.fechaf,
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Boton de cancelar');
+          },
+        },
+        {
+          text: 'Aceptar',
+          handler: () => {
+            //this.lugarApartado();
+            this.asistir(lugar);
+            this.navCtrl.navigateRoot('/calalumno');
+            // this.eliminarAsueto(fecha);
+          },
+        },
+      ],
+    });
+    await alert.present();
+  }
+
+  async apartarLugarIroda(lugar: any) {
     console.log('lugar' + lugar.numero);
     const alert = await this.alertCtrl.create({
       cssClass: 'my-custom-class',
@@ -391,5 +433,35 @@ export class LugaresPage implements OnInit {
     await loading.present();
 
     const { role, data } = await loading.onDidDismiss();
+  }
+
+  // Función para verificar si un lugar específico está seleccionado
+  isLugarSeleccionado(numeroLugar: number): boolean {
+    // Aquí puedes implementar la lógica para verificar si el lugar está seleccionado
+    // Por ejemplo, verificar en this.listado o en algún array de lugares seleccionados
+    if (this.listado && this.listado.respuesta) {
+      // Lógica para verificar el estado del lugar según los datos del servicio
+      return false; // Cambiar por la lógica real
+    }
+    return this.lugarSeleccionado === numeroLugar;
+  }
+
+  // Función para verificar si un lugar específico está ocupado
+  isLugarOcupado(numeroLugar: number): boolean {
+    // Aquí puedes implementar la lógica para verificar si el lugar está ocupado
+    // Por ejemplo, verificar en this.lugaresServicio o en this.listado
+    if (this.lugaresServicio && this.lugaresServicio.length > 0) {
+      // Buscar en el array de lugares del servicio
+      for (let fila of this.lugaresServicio) {
+        if (fila && fila.length > 0) {
+          for (let lugar of fila) {
+            if (lugar.numero === numeroLugar && lugar.seleccionado === true) {
+              return true; // El lugar está ocupado
+            }
+          }
+        }
+      }
+    }
+    return false; // El lugar no está ocupado
   }
 }

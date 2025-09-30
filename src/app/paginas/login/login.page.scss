@@ -3,7 +3,7 @@ div {
 }
 
 ion-content {
-  --background: url(/assets/img/fondoLogin.jpeg) no-repeat center/cover fixed;
+  --background: var(--login-background, url(/assets/img/LUAstudioPhoto.png)) no-repeat center/cover fixed;
   --background-repeat: no-repeat;
   --background-attachment: fixed !important;
 }

@@ -8,10 +8,10 @@
   <br />
   
   <div style="text-align: center">
-    <img style="width: 60%" src="../../assets/img/iiroda.png" />
+     <ion-img src="../../assets/img/{{logo}}" class="logo"></ion-img>  
   </div>
 
-  <ion-grid fixed>
+  <ion-grid fixed *ngIf="compania === 'iroda'">
     <ion-row>
       <ion-col size-md="6" size-lg="5" size-xs="12">
         <div padding>
@@ -70,6 +70,56 @@
     </ion-row>
   </ion-grid>
 
+  <ion-grid fixed *ngIf="compania === 'lua'">
+    <ion-row>
+      <ion-col size-md="6" size-lg="5" size-xs="12">
+        <div padding>
+          <ion-label>
+            * Las clases tienen una duración de 45 min., solo cuentas con 5 minutos de
+      tolerancia para poder ingresar.
+          </ion-label>
+          <br>
+          <ion-label>
+            * Los paquetes son intransferibles y tienen vigencia
+          </ion-label>
+          <br>
+          <ion-label>
+            * Uso de calcetines oblitatorio
+          </ion-label>
+          <br>
+          <ion-label>
+            * La política de cancelación es de {{horasCancelacion}} horas antes de tu clase
+          </ion-label>
+          <br>
+          <ion-label>
+            * Si tiene alguna lesión o enfermedad que presente un riesgo para la
+      práctica del ejercicio físico y para su salud, favor de comunicarlo a la coach
+          </ion-label>
+          <br>
+          <ion-label>
+            * LUA Studio no se responsabiliza por lesiones, daños o accidentes
+      dentro de nuestras instalaciones.
+          </ion-label>
+          <br>
+          <ion-label>
+            * Cuida y mantén limpio tu lugar, respeta tu lugar reservado en clase
+          </ion-label>
+          <br>
+          <br>
+
+        </div>
+        <ion-checkbox
+            style="font-size: 14px"
+            color="secondary"
+            [(ngModel)]="isChecked"></ion-checkbox
+          >
+        <ion-label style="font-size: 14px"> Estoy de acuerdo con los terminos y condiciones</ion-label>        
+        <div>
+        </div>
+      </ion-col>      
+    </ion-row>
+  </ion-grid>
+
   <div style="margin-bottom: 10px; text-align: center">    
     <ion-item lines="none">
       <div style="display: flex; flex-direction: column; width: 100%">
@@ -83,6 +133,7 @@
       type="submit"
       size="large"
       class="btndorado"
+      style="margin-bottom: 20px;"
     >
       Continuar</ion-button
     >

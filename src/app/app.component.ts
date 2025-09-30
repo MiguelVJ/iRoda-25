@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
+import { COMPANIA } from './app.config';
+import { IconsService } from './servicios/icons.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,14 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private storage: Storage) {}
+  compania = COMPANIA;
+  
+  constructor(
+    private storage: Storage,
+    private iconsService: IconsService
+  ) {
+    // Los íconos se registran automáticamente al inyectar el servicio
+  }
 
   async ngOnInit() {
     await this.storage.create();

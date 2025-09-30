@@ -4,6 +4,8 @@ import { AlertController, LoadingController, NavController, NavParams } from '@i
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
 import { NgForm } from '@angular/forms';
+import { API_URL } from 'src/app/app.config';
+import { COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-editarclase',
@@ -12,9 +14,7 @@ import { NgForm } from '@angular/forms';
 })
 export class EditarclasePage implements OnInit {
 
-  
-  urlapi = "http://54.176.17.249:8080/control_asistencias_api/";
-
+  compania = COMPANIA;
   usuario: any;
   numeroUsuario: any;
   idClase: any;
@@ -78,7 +78,7 @@ export class EditarclasePage implements OnInit {
       this.usuario = user;
       this.sociedad = this.usuario.respuesta.sociedad;
 
-      this.servicio.getData(this.urlapi + 'Usuarios/entrenadores?sociedad='+this.sociedad).subscribe(data => {
+      this.servicio.getData(API_URL + 'Usuarios/entrenadores?sociedad='+this.sociedad).subscribe(data => {
         let p = parseInt(this.profesor);
         this.idUs = p;
         let objUsEnt = JSON.stringify(data);

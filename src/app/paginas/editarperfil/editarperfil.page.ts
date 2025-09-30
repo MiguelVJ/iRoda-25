@@ -9,6 +9,8 @@ import {
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
 import { NgForm } from '@angular/forms';
+import { API_URL } from 'src/app/app.config';
+import { COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-editarperfil',
@@ -16,8 +18,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./editarperfil.page.scss'],
 })
 export class EditarperfilPage implements OnInit {
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
 
+  compania = COMPANIA;
   usuario: any;
   usuarioo: any;
   sexo: any;
@@ -79,7 +81,7 @@ export class EditarperfilPage implements OnInit {
     console.log(this.usuarioo, 'Usuario');
 
     this.servicio
-      .getData(this.urlapi + 'Usuarios/usuario/' + this.usuarioo)
+      .getData(API_URL + 'Usuarios/usuario/' + this.usuarioo)
       .subscribe((data) => {
         console.log(data, 'informacion del perfil seleccionado');
         this.listado = data;

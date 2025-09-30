@@ -7,6 +7,7 @@ import {
 } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 // import { CalendarComponentOptions } from "ion2-calendar";
+import { LOGO } from 'src/app/app.config';
 
 @Component({
   selector: 'app-caladmin',
@@ -14,6 +15,8 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['./caladmin.page.scss'],
 })
 export class CaladminPage implements OnInit {
+
+  logo: string = LOGO;
   date: any;
   fechacal: any;
   fechaf: any;

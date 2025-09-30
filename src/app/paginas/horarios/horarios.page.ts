@@ -8,6 +8,7 @@ import {
 } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
+import { API_URL } from 'src/app/app.config';
 
 @Component({
   selector: 'app-horarios',
@@ -29,7 +30,6 @@ export class HorariosPage implements OnInit {
   idrol: any;
   lugar: any;
   lugDisp: any;
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
 
   constructor(
     private servicio: LoginService,
@@ -57,7 +57,7 @@ export class HorariosPage implements OnInit {
 
       this.servicio
         .getData(
-          this.urlapi +
+          API_URL +
             'Clases' +
             '/por-fecha/' +
             this.fechaf +
@@ -95,7 +95,7 @@ export class HorariosPage implements OnInit {
   obtenerDatos() {
     this.servicio
       .getData(
-        this.urlapi +
+        API_URL +
           'Clases' +
           '/por-fecha/' +
           this.fechaf +
@@ -112,7 +112,7 @@ export class HorariosPage implements OnInit {
     this.fechaf = this.activatedRoute.snapshot.paramMap.get('fechaf');
     this.servicio
       .getData(
-        this.urlapi +
+        API_URL +
           'Clases' +
           '/esta-en-clase/' +
           idClase +
@@ -230,8 +230,7 @@ export class HorariosPage implements OnInit {
   bloqueado(idUsuario: any) {
     this.servicio
       .getData(
-        'http://54.176.17.249:8080/control_asistencias_api/Usuarios/bloqueo-por-pago/' +
-          idUsuario
+        API_URL + 'Usuarios/bloqueo-por-pago/' + idUsuario
       )
       .subscribe((data) => {
         this.usuario = data;

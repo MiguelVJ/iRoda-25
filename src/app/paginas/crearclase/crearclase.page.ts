@@ -8,6 +8,7 @@ import {
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
 import { NgForm } from '@angular/forms';
+import { API_URL } from 'src/app/app.config';
 
 @Component({
   selector: 'app-crearclase',
@@ -15,7 +16,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./crearclase.page.scss'],
 })
 export class CrearclasePage implements OnInit {
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
 
   mensajerror: any;
   mensaje: any;
@@ -139,7 +139,7 @@ export class CrearclasePage implements OnInit {
     this.loadingInicio();
 
     this.servicio
-      .getData(this.urlapi + 'Usuarios/entrenadores?sociedad=1')
+      .getData(API_URL + 'Usuarios/entrenadores?sociedad=1')
       .subscribe((data) => {
         let objUsEnt = JSON.stringify(data);
         let json = JSON.parse(objUsEnt);

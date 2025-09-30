@@ -8,6 +8,10 @@ import {
 } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
+import { API_URL } from 'src/app/app.config';
+import { AVATARH } from 'src/app/app.config';
+import { AVATARM } from 'src/app/app.config';
+import { COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-user',
@@ -15,8 +19,10 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['./user.page.scss'],
 })
 export class UserPage implements OnInit {
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
 
+  compania: string = COMPANIA;
+  avatarh: string = AVATARH;
+  avatarm: string = AVATARM;
   usuario: any;
   idRol: any;
   numeroUsuario: any;
@@ -66,7 +72,7 @@ export class UserPage implements OnInit {
       this.numeroUsuario = this.usuario.respuesta.idUsuario;
 
       this.servicio
-        .getData(this.urlapi + 'Usuarios/id_usuario/' + this.numeroUsuario)
+        .getData(API_URL + 'Usuarios/id_usuario/' + this.numeroUsuario)
         .subscribe((data: any) => {
           console.log(data, 'informacion del perfil seleccionado');
           this.listado = data;
@@ -181,8 +187,7 @@ export class UserPage implements OnInit {
   bloqueado(idUsuario: any) {
     this.servicio
       .getData(
-        'http://54.176.17.249:8080/control_asistencias_api/Usuarios/bloqueo-por-pago/' +
-          idUsuario
+        API_URL + 'Usuarios/bloqueo-por-pago/' + idUsuario
       )
       .subscribe((data) => {
         this.usuario = data;

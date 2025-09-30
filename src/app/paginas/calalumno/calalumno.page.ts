@@ -7,6 +7,8 @@ import {
 } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
+import { LOGO } from 'src/app/app.config';
+ import { API_URL } from 'src/app/app.config';
 
 @Component({
   selector: 'app-calalumno',
@@ -14,7 +16,8 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['./calalumno.page.scss'],
 })
 export class CalalumnoPage implements OnInit {
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
+
+  logo = LOGO;
 
   date: any;
   fecha: any;
@@ -122,7 +125,7 @@ export class CalalumnoPage implements OnInit {
   bloqueado(idUsuario: any) {
     this.servicio
       .getData(
-        'http://54.176.17.249:8080/control_asistencias_api/Usuarios/bloqueo-por-pago/' +
+        API_URL + 'Usuarios/bloqueo-por-pago/' +
           idUsuario
       )
       .subscribe((data) => {

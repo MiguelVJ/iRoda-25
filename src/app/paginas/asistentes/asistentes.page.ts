@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { AlertController, NavController, NavParams } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
+import { LOGO } from 'src/app/app.config';
+import { API_URL } from 'src/app/app.config';
 
 @Component({
   selector: 'app-asistentes',
@@ -12,6 +14,7 @@ import { Storage } from '@ionic/storage-angular';
 export class AsistentesPage implements OnInit {
   fechaClase: Date = new Date();
 
+  logo = LOGO;
   idClase: any;
   listado: any;
   nombre: any;
@@ -77,7 +80,7 @@ export class AsistentesPage implements OnInit {
 
       this.servicio
         .getData(
-          'http://54.176.17.249:8080/control_asistencias_api/AsistenciaClases/' +
+          API_URL + 'AsistenciaClases/' +
             this.idClase +
             '?fecha=' +
             this.fechaf +
@@ -201,7 +204,7 @@ export class AsistentesPage implements OnInit {
   obtenerDatos() {
     this.servicio
       .getData(
-        'http://54.176.17.249:8080/control_asistencias_api/AsistenciaClases/' +
+        API_URL + 'AsistenciaClases/' +
           this.idClase +
           '?fecha=' +
           this.fechaf +

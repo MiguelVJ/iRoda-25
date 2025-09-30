@@ -6,6 +6,7 @@ import {
 } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
+import { API_URL, COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-clases',
@@ -13,6 +14,7 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['./clases.page.scss'],
 })
 export class ClasesPage implements OnInit {
+  compania = COMPANIA;
   listado: any;
   listadoRespuesta: any;
   listadoAnterior: any;
@@ -23,8 +25,6 @@ export class ClasesPage implements OnInit {
   codigo: any;
   idrol: any;
   sociedad: any;
-
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
 
   textoBuscar = '';
 
@@ -42,7 +42,7 @@ export class ClasesPage implements OnInit {
       this.sociedad = this.usuario.respuesta.sociedad;
       //this.horariosLoading();
       this.servicio
-        .getData(this.urlapi + 'Clases?sociedad=' + this.sociedad)
+        .getData(API_URL + 'Clases?sociedad=' + this.sociedad)
         .subscribe((data) => {
           let objUsuario = JSON.stringify(data);
           let json = JSON.parse(objUsuario);

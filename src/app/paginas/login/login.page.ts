@@ -7,6 +7,11 @@ import {
 import { LoginService } from 'src/app/servicios/login.service';
 import { NgForm } from '@angular/forms';
 import { Storage } from '@ionic/storage-angular';
+import { API_URL } from 'src/app/app.config';
+import { LOGO } from 'src/app/app.config';
+import { LOGO_BLANCO } from 'src/app/app.config';
+import { COMPANIA } from 'src/app/app.config';
+import { FONDO } from 'src/app/app.config';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +24,10 @@ export class LoginPage implements OnInit {
     contrasenia: '',
   };
 
+  compania: string = COMPANIA;
+  logo: string = LOGO;
+  logoBlanco: string = LOGO_BLANCO;
+  fondo: string = FONDO;
   mensaje: any;
   Rol: any;
   usuario: any;
@@ -200,8 +209,7 @@ export class LoginPage implements OnInit {
   bloqueado(usuario: any) {
     this.servicio
       .getData(
-        'http://54.176.17.249:8080/control_asistencias_api/Usuarios/bloqueo-por-pago/' +
-          usuario
+        API_URL + 'Usuarios/bloqueo-por-pago/' + usuario
       )
       .subscribe((data) => {
         this.usuario = data;

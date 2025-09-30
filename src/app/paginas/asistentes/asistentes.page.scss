@@ -51,17 +51,21 @@ span.blue {
 }
 
 .label-lugares {
-  background-color: #b1e678;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #567419;
-  border-radius: 15px;
-  font-size: 12px;
+  background-color: #567419; /* Verde */
+  color: #ffffff; /* Letra blanca */
+  border-radius: 50%; /* Círculo perfecto */
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
   font-weight: bold;
   text-align: center;
+  margin: 2px;
 }
+
+
 
 ion-content ion-card {
   width: 95%;
@@ -86,26 +90,17 @@ ion-item {
 
 .label-lugaresf {
   background-color: #bd0fe1;
-  padding-bottom: 7px;
-  padding-top: 7px;
-  padding-left: 7px;
-  padding-right: 7px;
-  color: #ffffff;
-  border-radius: 20px;
+  color: #ffffff; /* Letra blanca */
+  border-radius: 50%; /* Círculo perfecto */
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 10px;
   font-weight: bold;
-}
-
-.label-lugar {
-  background-color: #eeeded;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #41b558;
-  border-radius: 15px;
-  font-size: 10px;
-  font-weight: bold;
+  text-align: center;
+  margin: 2px;
 }
 
 .label-asistio {
@@ -119,4 +114,16 @@ ion-item {
   border-radius: 10px;
   font-size: 10px;
   font-weight: bold;
+}
+
+.sinclases {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Altura para centrado vertical */
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  font-weight: 500;
+  width: 100%;
 }

@@ -9,7 +9,8 @@
         <ion-icon color="danger" slot="icon-only" name="trash-outline"></ion-icon>
       </ion-button>-->
       <ion-button (click)="nuevoAsueto()">
-        <ion-icon class="dorado" slot="icon-only" name="add-outline"></ion-icon>
+        <ion-icon class="dorado" slot="icon-only" name="add-outline" *ngIf="compania === 'iroda'"></ion-icon>
+        <ion-icon class="dorado icon-20" slot="icon-only" name="add" *ngIf="compania === 'lua'"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -57,7 +58,8 @@
           <ion-grid>
             <ion-row>
               <ion-col>
-                <img class="asuetoimg" src="assets/img/coffee-time.png">
+                <img class="asuetoimg" src="assets/img/coffee-time.png" *ngIf="compania === 'iroda'">
+                <img class="asuetoimg" src="assets/img/rest-day.png" *ngIf="compania === 'lua'">
                 <label style="font-weight: bold; font-size: 12px;">
                   Descanso en la clase {{Asuetos.claseDescripcion}}
                 </label>

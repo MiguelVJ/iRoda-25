@@ -8,19 +8,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-img src="../../assets/img/iiroda.png"></ion-img>
-  <div style="margin-bottom: 10px;text-align: center;">
+  <ion-img src="../../assets/img/{{logo}}" class="logo"></ion-img>
+  <div style="margin-bottom: 10px;text-align: center;margin-top:10px">
 
     <label style="font-size: 15px;">Fecha: {{fechaf}}</label><br>
     <label style="font-size: 14px;">
       {{descripcionHorario}}
     </label>
     <br>
-    <label style="font-size: 12px;margin-bottom: 5px;">
+    <label class="color-coach" style="font-size: 12px;margin-bottom: 5px;">
       Clase impartida por {{profesorNombre}}
     </label>
     <br>
-    <label class="label-lugares">
+    <label  class="label-g1">
       {{listado?.respuesta.lugares}}
     </label>
 
@@ -56,4 +56,5 @@
       </ion-card>
     </ion-item>
   </ion-list>
+  <label *ngIf="listado?.respuesta.usuarios.length == 0" class="sinclases"> No hay asistentes</label>
 </ion-content>

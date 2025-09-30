@@ -8,6 +8,7 @@ import {
 } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
+import { API_URL } from 'src/app/app.config';
 
 @Component({
   selector: 'app-asistenciasusuario',
@@ -26,7 +27,6 @@ export class AsistenciasusuarioPage implements OnInit {
   estatus: any;
   idUsuario: any;
   mensajeerror: any;
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
 
   constructor(
     private servicio: LoginService,
@@ -54,7 +54,7 @@ export class AsistenciasusuarioPage implements OnInit {
 
       this.servicio
         .getData(
-          this.urlapi +
+          API_URL +
             'AsistenciaClases' +
             '/asistencias-usuario'+
             '/' +

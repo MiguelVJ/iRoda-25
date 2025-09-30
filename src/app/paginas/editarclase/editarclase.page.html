@@ -6,13 +6,14 @@
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button (click)="eliminarClase()">
-        <ion-icon color="danger" name="trash-outline"></ion-icon>
+        <ion-icon color="danger" name="trash-outline" *ngIf="compania === 'iroda'"></ion-icon>
+        <ion-icon class="rojo icon-20" slot="icon-only" name="trash" *ngIf="compania === 'lua'"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="contenido">
   <form #editarClase="ngForm" novalidate>
     <ion-grid>
       <ion-row>

@@ -9,6 +9,7 @@ import {
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
 import { NgForm } from '@angular/forms';
+import { API_URL } from 'src/app/app.config';
 
 @Component({
   selector: 'app-paquetes',
@@ -16,7 +17,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./paquetes.page.scss'],
 })
 export class PaquetesPage implements OnInit {
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
 
   ionViewWillEnter() {
     this.idUsuario = this.activatedRoute.snapshot.paramMap.get('idUsuario');
@@ -170,7 +170,7 @@ export class PaquetesPage implements OnInit {
       this.sociedad = this.usuarioData.respuesta.sociedad;
       this.servicio
         .getData(
-          this.urlapi +
+          API_URL +
             'Inscripciones/tipos-inscripcion?sociedad=' +
             this.sociedad
         )
@@ -191,7 +191,7 @@ export class PaquetesPage implements OnInit {
 
       this.servicio
         .getData(
-          this.urlapi + 'Inscripciones/tipos-pago?sociedad=' + this.sociedad
+          API_URL + 'Inscripciones/tipos-pago?sociedad=' + this.sociedad
         )
         .subscribe((data) => {
           let objUsEnt = JSON.stringify(data);

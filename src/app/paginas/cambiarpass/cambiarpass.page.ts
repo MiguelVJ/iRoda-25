@@ -8,6 +8,8 @@ import {
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
 import { NgForm } from '@angular/forms';
+import { API_URL } from 'src/app/app.config';
+import { COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-cambiarpass',
@@ -15,7 +17,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./cambiarpass.page.scss'],
 })
 export class CambiarpassPage implements OnInit {
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
 
   cp = {
     idUsuario: '',
@@ -24,6 +25,7 @@ export class CambiarpassPage implements OnInit {
     confirmarpass: '',
   };
 
+  compania = COMPANIA;
   mensaje: any;
   mensajerr: any;
   submitted = false;
@@ -147,8 +149,7 @@ export class CambiarpassPage implements OnInit {
   bloqueado(idUsuario: any) {
     this.servicio
       .getData(
-        'http://54.176.17.249:8080/control_asistencias_api/Usuarios/bloqueo-por-pago/' +
-          idUsuario
+        API_URL + 'Usuarios/bloqueo-por-pago/' + idUsuario
       )
       .subscribe((data) => {
         this.usuario = data;

@@ -8,6 +8,8 @@ import {
 } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { LoginService } from 'src/app/servicios/login.service';
+import { API_URL } from 'src/app/app.config';
+import { COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-horariosadmin',
@@ -15,6 +17,8 @@ import { LoginService } from 'src/app/servicios/login.service';
   styleUrls: ['./horariosadmin.page.scss'],
 })
 export class HorariosadminPage implements OnInit {
+
+  compania = COMPANIA;
   listado: any;
   usuario: any;
   idClase: any;
@@ -29,8 +33,6 @@ export class HorariosadminPage implements OnInit {
   estatus: any;
   numeroProfesor: any;
   rolId: any;
-
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
 
   constructor(
     private servicio: LoginService,
@@ -58,7 +60,7 @@ export class HorariosadminPage implements OnInit {
     if (this.rolId == 3) {
       this.servicio
         .getData(
-          this.urlapi +
+          API_URL +
             'Clases' +
             '/por-fecha/profesor/' +
             this.fechaf +
@@ -88,7 +90,7 @@ export class HorariosadminPage implements OnInit {
     if (this.rolId == 1) {
       this.servicio
         .getData(
-          this.urlapi +
+          API_URL +
             'Clases/activas-para-admin/' +
             this.fechaf +
             '?sociedad=' +

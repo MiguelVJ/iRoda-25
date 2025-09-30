@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, LoadingController } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
+import { API_URL } from 'src/app/app.config';
 
 @Component({
   selector: 'app-clasesalumnos',
@@ -12,8 +13,6 @@ export class ClasesalumnosPage implements OnInit {
   listado:any;
   // usuario:any;
   idClase: any;
-
-  urlapi="http://54.176.17.249:8080/control_asistencias_api/";
   
   constructor(
     private servicio : LoginService,
@@ -23,7 +22,7 @@ export class ClasesalumnosPage implements OnInit {
 
   ngOnInit() {
 
-    this.servicio.getData(this.urlapi + 'Clases').subscribe(data =>{
+    this.servicio.getData(API_URL + 'Clases').subscribe(data =>{
       console.log(data, "listado de clases");
       this.presentLoading();
       this.listado=data;

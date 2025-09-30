@@ -7,6 +7,8 @@ import {
 } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
 import { ModalInfEaPage } from '../modal-inf-ea/modal-inf-ea.page';
+import { API_URL } from 'src/app/app.config';
+import { COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-asuetos',
@@ -14,7 +16,8 @@ import { ModalInfEaPage } from '../modal-inf-ea/modal-inf-ea.page';
   styleUrls: ['./asuetos.page.scss'],
 })
 export class AsuetosPage implements OnInit {
-  urlapi = 'http://54.176.17.249:8080/control_asistencias_api/';
+
+  compania = COMPANIA;
   listado: any;
   listadoRespuesta: any;
   codigo: any;
@@ -30,7 +33,7 @@ export class AsuetosPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.servicio.getData(this.urlapi + 'Asuetos').subscribe((data) => {
+    this.servicio.getData(API_URL + 'Asuetos').subscribe((data) => {
       let objUsuario = JSON.stringify(data);
       let json = JSON.parse(objUsuario);
       this.codigo = json.codigo;
@@ -50,7 +53,7 @@ export class AsuetosPage implements OnInit {
   }
 
   actualizarDatos() {
-    this.servicio.getData(this.urlapi + 'Asuetos').subscribe((data) => {
+    this.servicio.getData(API_URL + 'Asuetos').subscribe((data) => {
       this.listado = data;
     });
   }

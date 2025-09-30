@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { LoginService } from 'src/app/servicios/login.service';
+import { COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-crearpaquete',
@@ -9,6 +10,8 @@ import { LoginService } from 'src/app/servicios/login.service';
   styleUrls: ['./crearpaquete.page.scss'],
 })
 export class CrearpaquetePage implements OnInit {
+
+  compania = COMPANIA;
   listado: any;
   mensaje: any;
   submitted = false;
