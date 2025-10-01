@@ -41,6 +41,7 @@ export class UserPage implements OnInit {
   mensajeM: any;
   confaltas: any;
   sinfaltas: any;
+  fechaNacimiento: any;
 
   idClase: any;
   nombreP: any;
@@ -83,6 +84,7 @@ export class UserPage implements OnInit {
           this.sexo = this.respuestaUser.sexo;
           this.nombre = this.respuestaUser.nombre;
           this.user = this.respuestaUser.usuario;
+          this.fechaNacimiento = this.respuestaUser.fechaNacimiento;
 
           this.multas = this.usuario.respuesta.totalMultas;
           this.faltas = this.usuario.respuesta.contadorFaltas;
@@ -111,6 +113,7 @@ export class UserPage implements OnInit {
     idUsuario: '',
     telefono: '',
     correoElectronico: '',
+     fechaNacimiento: ''
   };
 
   verAsistencias() {
@@ -120,8 +123,9 @@ export class UserPage implements OnInit {
   editarUser() {
     let obj = {
       idUsuario: this.numeroUsuario,
-      telefono: this.eu.telefono,
-      correoElectronico: this.eu.correoElectronico,
+      telefono: this.telefono,
+      correoElectronico: this.email,
+      fechaNacimiento: this.fechaNacimiento
     };
 
     this.servicio.editarUser(obj).subscribe((response: any) => {

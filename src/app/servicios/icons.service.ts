@@ -25,6 +25,8 @@ export class IconsService {
         'trash': '/assets/icon/trash.svg',
         'add': '/assets/icon/add.svg',
         'keyreset': '/assets/icon/keyreset.svg',
+        'backl': '/assets/icon/backl.svg',  
+        'backl2': '/assets/icon/backl2.svg',  
       });
       console.log('Íconos personalizados registrados correctamente');
     } catch (error) {

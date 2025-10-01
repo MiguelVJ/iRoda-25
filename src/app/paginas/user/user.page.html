@@ -70,14 +70,21 @@
           <ion-item>
             <ion-label style="color:gray" position="stacked">Telefono</ion-label>
             <!-- <h4 class="preference-name">Telefono</h4> -->
-            <ion-input name="telefono" type="tel" value="{{telefono}}" [(ngModel)]="eu.telefono" required></ion-input>
+            <ion-input name="telefono" type="tel" [(ngModel)]="telefono" required></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label style="color:gray" position="stacked">Correo electrónico</ion-label>
 
-            <ion-input name="correoElectronico" type="text" value="{{email}}" [(ngModel)]="eu.correoElectronico"
-              required></ion-input>
+            <ion-input name="correoElectronico" type="text" [(ngModel)]="email" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label style="color:gray" position="stacked">Fecha de nacimiento</ion-label>
+
+            <ion-input name="fechaNacimiento" type="date" [(ngModel)]="fechaNacimiento" required></ion-input>
+
+             
+
           </ion-item>
         </div>
         <br>

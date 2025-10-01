@@ -266,12 +266,12 @@ ion-button.btndorado {
 }
 
 .label-estatus-a-lua {
-  background-color: #7C3AED;
+  background-color: #ca14b5;
   color: #ffffff;
   border-radius: 50%;
   /* Círculo perfecto */
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -295,8 +295,8 @@ ion-button.btndorado {
   color: #ffffff;
   border-radius: 50%;
   /* Círculo perfecto */
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -447,3 +447,10 @@ ion-item::part(native) {
   padding-left: unset;
   /** and lots more **/
 }
+
+
+/* Estilo global para todos los ion-back-button */
+ion-back-button {
+  margin-left: 4px !important;
+}
+

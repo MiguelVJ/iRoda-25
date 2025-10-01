@@ -21,7 +21,7 @@ if ('lua' === compania) {
     avatarm = 'avatar-m-iroda.png';
 }
 
-var urlPro = 'https://crm-familiasunidasla.com/clock-in-api/';
+var urlPro = 'http://ec2-3-18-216-78.us-east-2.compute.amazonaws.com:8080/clock-in-api/';
 var urlQas = 'http://ec2-54-215-12-132.us-west-1.compute.amazonaws.com:8080/clock-in-api/';
 var urlLocal = 'http://localhost:8080/clock-in-api/';
 var pro = false;

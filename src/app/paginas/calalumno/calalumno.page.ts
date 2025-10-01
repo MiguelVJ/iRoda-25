@@ -8,7 +8,7 @@ import {
 import { LoginService } from 'src/app/servicios/login.service';
 import { Storage } from '@ionic/storage-angular';
 import { LOGO } from 'src/app/app.config';
- import { API_URL } from 'src/app/app.config';
+ import { API_URL,COMPANIA } from 'src/app/app.config';
 
 @Component({
   selector: 'app-calalumno',
@@ -18,7 +18,7 @@ import { LOGO } from 'src/app/app.config';
 export class CalalumnoPage implements OnInit {
 
   logo = LOGO;
-
+  compania = COMPANIA;  
   date: any;
   fecha: any;
   fechaf: any;
