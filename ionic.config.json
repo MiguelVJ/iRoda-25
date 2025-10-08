@@ -1,5 +1,5 @@
 {
-  "name": "iRoda",
+  "name": "LUA Studio",
   "integrations": {
     "capacitor": {
       "enabled": false
