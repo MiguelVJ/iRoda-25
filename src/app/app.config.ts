@@ -24,8 +24,8 @@ if ('lua' === compania) {
 var urlPro = 'http://ec2-3-18-216-78.us-east-2.compute.amazonaws.com:8080/clock-in-api/';
 var urlQas = 'http://ec2-54-176-17-249.us-west-1.compute.amazonaws.com:8080/control_asistencias_api/';
 var urlLocal = 'http://localhost:8080/clock-in-api/';
-var pro = false;
-var qas = true;
+var pro = true;
+var qas = false;
 
 /*console.log('es pro? '+pro);
 console.log('api pro '+urlPro);
