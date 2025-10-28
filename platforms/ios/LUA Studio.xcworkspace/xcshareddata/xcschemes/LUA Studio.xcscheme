@@ -53,7 +53,7 @@
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "LUA Studio.app"
             BlueprintName = "LUA Studio"
-            ReferencedContainer = "container:LUA Studio.xcodeproj">
+            ReferencedContainer = "container:LUA Studio.xcworkspace">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,7 +76,7 @@
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "LUA Studio.app"
             BlueprintName = "LUA Studio"
-            ReferencedContainer = "container:LUA Studio.xcodeproj">
+            ReferencedContainer = "container:LUA Studio.xcworkspace">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,7 +95,7 @@
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "LUA Studio.app"
             BlueprintName = "LUA Studio"
-            ReferencedContainer = "container:LUA Studio.xcodeproj">
+            ReferencedContainer = "container:LUA Studio.xcworkspace">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
