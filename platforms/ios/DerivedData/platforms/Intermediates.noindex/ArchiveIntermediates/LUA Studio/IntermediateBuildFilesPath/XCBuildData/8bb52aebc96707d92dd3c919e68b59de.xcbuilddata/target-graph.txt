@@ -1,6 +1,0 @@
-Target dependency graph (3 targets)
-Target 'LUA Studio' in project 'LUA Studio'
-➜ Explicit dependency on target 'CordovaLib' in project 'CordovaLib'
-➜ Implicit dependency on target 'Pods-LUA Studio' in project 'Pods' via file 'libPods-LUA Studio.a' in build phase 'Link Binary'
-Target 'Pods-LUA Studio' in project 'Pods' (no dependencies)
-Target 'CordovaLib' in project 'CordovaLib' (no dependencies)
