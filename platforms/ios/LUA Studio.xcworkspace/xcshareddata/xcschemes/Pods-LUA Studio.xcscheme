@@ -17,7 +17,7 @@
                BlueprintIdentifier = "33C65753505EBC7584EED5FF07C2FBB1"
                BuildableName = "libPods-LUA Studio.a"
                BlueprintName = "Pods-LUA Studio"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+               ReferencedContainer = "container:Pods/Pods.xcworkspace">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
