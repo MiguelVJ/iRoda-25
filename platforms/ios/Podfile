@@ -3,6 +3,7 @@
 platform :ios, '11.0'
 
 target 'LUA Studio' do
-	project 'LUA Studio.xcodeproj'
+	# project 'LUA Studio.xcodeproj'
+	project 'LUA Studio.xcworkspace'
 
 end
