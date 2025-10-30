@@ -1,0 +1,80 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "a2e3470352f83da45ce8a6fbffeb90020fa8628908142c1784945aff676e527f"
+    }
+  ],
+  "containerPath" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/LUA Studio.xcworkspace",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "install",
+    "activeArchitecture" : "undefined_arch",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : true,
+      "platform" : "iphoneos",
+      "sdk" : "iphoneos18.2",
+      "sdkVariant" : "iphoneos",
+      "supportedArchitectures" : [
+        "armv4t",
+        "armv5",
+        "armv6",
+        "armv7",
+        "armv7f",
+        "armv7s",
+        "armv7k",
+        "arm64",
+        "arm64e"
+      ],
+      "targetArchitecture" : "undefined_arch"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex",
+      "buildProductsPath" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Products",
+      "derivedDataPath" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/LUA Studio/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/LUA Studio/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "install",
+          "ASSET_PACK_FOLDER_PATH" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ArchiveIntermediates/LUA Studio/InstallationBuildProductsLocation/OnDemandResources",
+          "ASSETCATALOG_COMPILER_FLATTENED_APP_ICON_PATH" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ArchiveIntermediates/LUA Studio/BuildProductsPath/ProductIcon.png",
+          "DEPLOYMENT_LOCATION" : "YES",
+          "DEPLOYMENT_POSTPROCESSING" : "YES",
+          "DSTROOT" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ArchiveIntermediates/LUA Studio/InstallationBuildProductsLocation",
+          "EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE" : "NO",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_SIGNATURE_AGGREGATION" : "YES",
+          "ENABLE_XOJIT_PREVIEWS" : "YES",
+          "INDEX_ENABLE_DATA_STORE" : "NO",
+          "MESSAGES_APPLICATION_EXTENSION_SUPPORT_FOLDER_PATH" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ArchiveIntermediates/LUA Studio/BuildProductsPath/MessagesApplicationExtensionSupport",
+          "MESSAGES_APPLICATION_SUPPORT_FOLDER_PATH" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ArchiveIntermediates/LUA Studio/BuildProductsPath/MessagesApplicationSupport",
+          "OBJROOT" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ArchiveIntermediates/LUA Studio/IntermediateBuildFilesPath",
+          "SHARED_PRECOMPS_DIR" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ArchiveIntermediates/LUA Studio/PrecompiledHeaders",
+          "SIGNATURE_METADATA_FOLDER_PATH" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ArchiveIntermediates/LUA Studio/BuildProductsPath/Signatures",
+          "SWIFT_STDLIB_TOOL_UNSIGNED_DESTINATION_DIR" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ArchiveIntermediates/LUA Studio/BuildProductsPath/SwiftSupport",
+          "SYMROOT" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ArchiveIntermediates/LUA Studio/BuildProductsPath",
+          "WATCHKIT_2_SUPPORT_FOLDER_PATH" : "/Users/miguelangelvazquezjimenez/Desktop/LUA Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ArchiveIntermediates/LUA Studio/BuildProductsPath/WatchKitSupport2"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "archive",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
