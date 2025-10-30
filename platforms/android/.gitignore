@@ -13,6 +13,7 @@ out
 # Gradle build artifacts
 .gradle
 .gradletasknamecache
+/platforms/android
 /build
 /CordovaLib/build
 /app/build
