@@ -1,0 +1,13 @@
+moduledependenciestarget: \
+  /Users/miguelangelvazquezjimenez/Desktop/LUA\ Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ExplicitPrecompiledModules/Foundation-E1WQ0UD4MB40EAWLU4JHRQJ31.pcm \
+  /Users/miguelangelvazquezjimenez/Desktop/LUA\ Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ExplicitPrecompiledModules/os_availability-4CT7K1YXSGDCOZX6F3RNRHP8V.pcm \
+  /Users/miguelangelvazquezjimenez/Desktop/LUA\ Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ExplicitPrecompiledModules/Darwin-42W6Y2ZX66TG6JMPT24UB496U.pcm \
+  /Users/miguelangelvazquezjimenez/Desktop/LUA\ Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ExplicitPrecompiledModules/TargetConditionals-8O55BI6UWJ8HE5FV1LSCWUTJZ.pcm \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/usr/include/Darwin.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/usr/include/TargetConditionals.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/usr/include/os_availability.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/System/Library/Frameworks/CoreMedia.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/System/Library/Frameworks/CoreMIDI.framework/Modules/module.modulemap

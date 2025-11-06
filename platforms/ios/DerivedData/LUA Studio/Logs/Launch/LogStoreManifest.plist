@@ -5,6 +5,68 @@
 	<key>logFormatVersion</key>
 	<integer>11</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>FFFE47DC-B367-4912-9520-CFB3E81C5F5F</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>D78ABCCA-1738-4B4E-8D0E-11F8AE9654E5</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>37</integer>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-LUA Studio-2025.10.30_13-24-09--0600.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>37</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>LUA Studio Workspace</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>LUA Studio</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run LUA Studio</string>
+			<key>timeStartedRecording</key>
+			<real>783545049.80568695</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run LUA Studio</string>
+			<key>uniqueIdentifier</key>
+			<string>FFFE47DC-B367-4912-9520-CFB3E81C5F5F</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

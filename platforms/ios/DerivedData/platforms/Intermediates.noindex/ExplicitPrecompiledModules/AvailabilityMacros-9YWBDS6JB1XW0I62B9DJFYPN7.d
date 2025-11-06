@@ -1,0 +1,8 @@
+moduledependenciestarget: \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/os_availability.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/usr/include/os_availability.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/AvailabilityMacros.h \
+  /Users/miguelangelvazquezjimenez/Desktop/LUA\ Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ExplicitPrecompiledModules/os_availability_internal-8KW94HT2SK63RBBHNQXTOXR20.pcm \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/usr/include/TargetConditionals.modulemap \
+  /Users/miguelangelvazquezjimenez/Desktop/LUA\ Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ExplicitPrecompiledModules/TargetConditionals-8O55BI6UWJ8HE5FV1LSCWUTJZ.pcm \
+  /Users/miguelangelvazquezjimenez/Desktop/LUA\ Studio/App/iRoda-25/platforms/ios/DerivedData/platforms/Intermediates.noindex/ExplicitPrecompiledModules/os_availability-4CT7K1YXSGDCOZX6F3RNRHP8V.pcm
